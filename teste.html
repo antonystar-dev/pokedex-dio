@@ -8,10 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+
+
+
     <script type="text/javascript">
-       function teste(offset=0, limit=5){
+       function teste(){
  
- const url =`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+ const url =`https://pokeapi.co/api/v2/pokemon/1/`;
  return fetch(url)
      .then((response) => response.json())
      .then((jsonBody) => jsonBody.results)
