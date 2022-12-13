@@ -1,0 +1,17 @@
+/*
+fetch(url).then(function(response){
+    console.log(response)
+
+})
+.then((jsonBody)=>{
+    debugger
+    console.log(jsonBody)})//aq ta pegando ja em json
+.catch(function(error){
+    console.error(error)
+})
+.finally(function(){
+    console.log('Requisição concluida')//aq tanto faz se conectou ou não com o servidor... so conclui msm
+})
+1 fim - Esse codigo está conectando ao servidor API passando o limite de 0 a 10 - Ele vai enviar a solicitação ao servidor (fech) e quando o servidor responder, será carregado a resposta e exibido no console.log(response), se não console.log(error)
+uma maneira de fazer esse codigo menor, seria substituir assim: .then((response)=>response.json())
+AQ ESTÁ RESPONSE.JSON pq a api foi feita em json.... o sinal => significa função.... mas é utilizado mais nesses casos */
