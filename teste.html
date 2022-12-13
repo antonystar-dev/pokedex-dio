@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <script type="text/javascript">
-        pokeApi.getPokemons =(offset=0, limit=5) => {
+        teste(offset=0, limit=5){
  
  const url =`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
  return fetch(url)
@@ -19,7 +19,7 @@
      .then((detailsRequests) => Promise.all(detailsRequests))
      .then((pokemonsDetails) => pokemonsDetails)
 }
-pokeApi.getPokemons()
+teste()
     </script>
 
 </head>
