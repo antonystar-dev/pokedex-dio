@@ -1,4 +1,3 @@
-
 //1 inicio
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
@@ -7,23 +6,26 @@ const limit = 15;
 let offset = 0;
 
 function convertPokemonToLi(pokemon){
-return`
-       
+
+        
+    return`
+    
+
        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
+            <span class="number">#${idpok=pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
             <div class="detail">
                 <ol class="types">
                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <a href="detalhes.html?page=${teste1=pokemon.number-1}"><img src="${pokemon.photo}"alt="${pokemon.name}"></a>
             </div>
         </li>
     
     `
-           //aq é a case e não aspas simples
    
+           //aq é a case e não aspas simples
+        
 }
 function loadPokemonItens(offset,limit){
 pokeApi.getPokemons(offset,limit).then((pokemons = []) => {
@@ -48,4 +50,6 @@ loadMoreButton.addEventListener('click', ()=>{
     
 
 })
-
+details.addEventListener('click',()=>{
+    window.location='detalhes.html'
+})
